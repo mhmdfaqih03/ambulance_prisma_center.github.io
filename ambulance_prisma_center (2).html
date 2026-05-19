@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Prisma Center - Masjid Jami Al Ikhlas</title>
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --primary-blue: #1976d2;
+            --dark-bg: #121212;
+            --text-light: #f5f5f5;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-blue));
+            padding: 20px;
+            text-align: center;
+        }
+        .container { width: 90%; margin: auto; padding: 20px; }
+        .hero { text-align: center; padding: 50px 0; }
+        .card {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 1px solid #333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            margin: 5px;
+        }
+        .btn:hover { transform: scale(1.1); }
+        .marquee { font-size: 1.5em; color: #ffeb3b; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ambulance Prisma Center</h1>
+        <p>Masjid Jami Al Ikhlas, Condet, Balekambang, Kramat Jati, Jakarta Timur</p>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h2 id="datetime"></h2>
+            <div class="marquee">
+                <marquee>Siap Melayani 24 Jam dengan Hati & Profesional - Peduli untuk Sesama - Siaga Bencana & Bakti Sosial</marquee>
+            </div>
+        </div>
+
+        <section class="card">
+            <h2>Layanan Kami</h2>
+            <ul>
+                <li>Pengantaran & Penjemputan Pasien</li>
+                <li>Pengantaran Jenazah (Dalam & Luar Kota)</li>
+                <li>Siaga Bencana & Bakti Sosial</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Wilayah Jangkauan</h2>
+            <p>JABODETABEK & Sekitarnya, Pulau Jawa. (Untuk luar pulau, langsung hubungi Admin).</p>
+            <p><strong>Catatan:</strong> Kami hanya memiliki 1 unit armada. Jika armada kami sedang sibuk, silakan hubungi <strong>112</strong> atau <strong>119</strong>.</p>
+            <a href="https://wa.me/6285128009112" class="btn" style="background: #25d366;">Chat Admin (Butuh Ambulance)</a>
+        </section>
+
+        <section class="card">
+            <h2>Donasi & Dukungan Operasional</h2>
+            <p>Bantu kami terus melayani masyarakat:</p>
+            <a href="https://linktr.ee/ambulanceprismacenter" class="btn">Linktr.ee (Info Lengkap)</a>
+            <a href="https://sociabuzz.com/prismaalikhlas/tribe" class="btn">SociaBuzz (Donasi)</a>
+            <p>Transfer: <strong>SeaBank - 901572920128</strong></p>
+        </section>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('datetime').innerHTML = now.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) + ' - ' + now.toLocaleTimeString('id-ID');
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
